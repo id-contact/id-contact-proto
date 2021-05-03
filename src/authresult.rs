@@ -4,7 +4,7 @@ use serde::{Serialize, Deserialize};
 use rocket::form::{FromFormField};
 
 /// Result status of authentication flow
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub enum AuthStatus {
     /// Authentication flow completed succesfully, resulting in attributes
     #[serde(rename = "succes")]
@@ -15,7 +15,7 @@ pub enum AuthStatus {
 }
 
 /// Result of an authentication flow
-#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub struct AuthResult {
     /// Status of the result
     pub status: AuthStatus,
