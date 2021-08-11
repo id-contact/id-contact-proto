@@ -19,3 +19,14 @@ pub struct StartCommResponse {
     #[serde(skip_serializing_if = "Option::is_none")]
     pub attr_url: Option<String>,
 }
+
+/// Parameters expected by the auth-select widget
+#[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
+pub struct AuthSelectParams {
+    /// The session purpose
+    pub purpose: String,
+    /// The start url to redirect the user to on authentication success
+    pub start_url: String,
+    /// The communication method's display name
+    pub display_name: String,
+}
