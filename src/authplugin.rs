@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 /// Data sent along in a start_authentication request
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
