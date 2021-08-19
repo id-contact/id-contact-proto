@@ -1,4 +1,4 @@
-use serde::{Serialize, Deserialize};
+use serde::{Deserialize, Serialize};
 
 /// Data provided for a start_communication request
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq)]
