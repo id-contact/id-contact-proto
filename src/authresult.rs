@@ -6,10 +6,10 @@ use serde::{Deserialize, Serialize};
 /// Result status of authentication flow
 #[derive(Debug, Serialize, Deserialize, PartialEq, Eq, Clone)]
 pub enum AuthStatus {
-    /// Authentication flow completed succesfully, resulting in attributes
-    #[serde(rename = "succes")]
-    Succes,
-    /// Authentication flow completed unsuccesfully, no attributes were obtained
+    /// Authentication flow completed successfully, resulting in attributes
+    #[serde(rename = "success")]
+    Success,
+    /// Authentication flow completed unsuccessfully, no attributes were obtained
     #[serde(rename = "failed")]
     Failed,
 }
